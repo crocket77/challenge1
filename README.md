@@ -1,6 +1,6 @@
 This is the first challenge given by the UT web development bootcamp course. Our goal is to refactor a website so that it is current in terms of good practice and modern HTML and CSS. 
 
-<img src="./assets/images/challenge1screenshot" alt ="website snapshot"/>
+<img src="./assets/images/challenge1screenshot.png" alt ="website snapshot"/>
 
 Github repository
 https://github.com/crocket77/challenge1
