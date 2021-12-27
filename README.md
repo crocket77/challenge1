@@ -9,18 +9,15 @@ https://crocket77.github.io/challenge1/
 
 
 Here are the changes that I made in index.html HTML:
-Updated webpage title
-added <header>
-added <nav> to header
+Updated webpage title,
+added header, nav, footer, and section HTML semantics
 added alt attributes to all images
-defined footer as <footer>
-changed <h2> to <h4> in the header
+changed <h2> to <h4> in the footer
 
 
 Here are the changes made in style.css:
 I decided to combine multiple classes because styling declarations were replicated and part of the same parent container.
-multiple font declarations needed quotes
-I renamed or edited classes to match HTML revisions.
+Multiple font declarations needed quotes around them. I renamed or edited classes to match HTML revisions.
 
 
 
@@ -45,22 +42,23 @@ Technical Acceptance Criteria: 40%
 Satisfies all of the preceding acceptance criteria plus the following code improvements:
 Application's links all function correctly. DONE
 Application's CSS selectors and properties are consolidated and organized to follow semantic structure. DONE
-Application's CSS file is properly commented. 
+Application's CSS file is properly commented. DONE
 
 Deployment: 32%
-Application deployed at live URL. 
-Application loads with no errors.
-Application GitHub URL submitted.
-GitHub repository that contains application code.
+Application deployed at live URL. DONE
+Application loads with no errors. DONE
+Application GitHub URL submitted. DONE
+GitHub repository that contains application code. DONE
 
 Application Quality: 15%
 Application resembles (at least 90%) screenshots provided in challenge instructions.
 Repository Quality: 13%
-Repository has a unique name.
-Repository follows best practices for file structure and naming conventions.
-Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-Repository contains multiple descriptive commit messages.
-Repository contains quality README file with description, screenshot, and link to deployed application.
+Repository has a unique name. DONE
+Repository follows best practices for file structure and naming conventions. DONE
+Repository follows best practices for class/id naming conventions, indentation, quality comments, etc. DONE
+Repository contains multiple descriptive commit messages. DONE
+Repository contains quality README file with description, screenshot, and link to deployed application. DONE
+
 How to Submit the Challenge
 You are required to submit BOTH of the following for review:
 The URL of the deployed application.
