@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Staatliches&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!-- <link rel="flags" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icons.min.css" integrity="sha512-UwbBNAFoECXUPeDhlKR3zzWU3j8ddKIQQsDOsKhXQGdiB5i3IHEXr9kXx82+gaHigbNKbTDp3VY/G6gZqva6ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <title>Phat News</title>
+</head>
+<body class="has-navbar-fixed-top">
+
+
+<!-- start make header with nav to jarod sport cards -->
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="./assets/images/Phat.png" width="112" height="50">
+      </a>
+      
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+        
+        <a class="navbar-item">
+          World's Sports
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            NFL Dose
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- end header nav-->
+
+    <!-- start hero -->
+    <jumbotron class="hero">
+            <img class="is-justify-content-center" src="./assets/images/ringshero.jpg" alt="2022 olympic rings">
+        </div>
+    </jumbotron>
+
+
+    <!-- start modal CTA user enters name and selects country to view recent news -->
+    <div id="modal-cta" class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-content notification is-paddingless has-text-centered is-marginless">
+            <h1 class="title is-size-1">Phat News</h1>
+            <form class="field" name="userInfo" id="cta-form"> 
+
+                <!--start field for user name -->
+                <div class="field" id="name-field">
+                    <label class="label" for="userName">Enter your username!</label>
+                    <div class="control">
+                        <input class="input is-rounded" type="text" id="userName" placeholder="Enter username">
+                    </div>
+                </div> 
+
+                <!-- start dropdown for country -->
+                <div class="dropdown" id="country-field">
+
+                    <p class="" for="countryName">Select your Country!</p>
+                    <div class="dropdown">
+                        <select class="" name="countryName" id="countryName"></select>
+                    </div>
+
+                </div> 
+                <button id="loginBtn" type="submit" class="button is-primary is-outlined">Submit</button>
+            </form> 
+        </div>
+        
+    </div>
+
+    <!-- country news search function -->
+
+    <div id="user-card" class="card has-text-centered is-medium"></div>
+
+    <h1 class="is-size-1 has-text-centered">Phat News!</h1>
+       
+    <p id="currentDay" class="lead"></p>
+  
+    
+    <div class="cta content has-text-centered">
+        <h2 class="title is-size-6 ">Get current sports news at your fingertips!</h2>
+        <form id="user-form" class="box">
+            <section>
+              <h3 class="cta-header title is-size-5">First pick a country and then submit!</h3><br>
+              <div class="field control">
+                <label for="country" class="title is-6">Enter a country:</label>
+                <input name="country" type="text"  id="country" class="form-input" autofocus="true" placeholder="Country name"/>
+                <button class="button is-primary is-outlined">Submit</button><br><br>
+            </div>
+            </section><br>
+
+        </form>
+
+
+    <!-- world news container -->       
+    <div id="newsContainer" class="hide">    
+        <!-- <h2 class="title is-3">Sports Around The Globe</h2> -->
+        <section id="newsFeed" class="container"></section>
+    </div>
+
+    <!-- daily dose of NFL -->
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        </div> 
+      
+
+
+
+  <!-- comment for change -->
+    <!-- <div>    
+        <h2>
+        Sports Around The Globe
+        </h2> -->
+    <section id="newsFeed" class="container"></section>
+    
+
+    </div>
+ 
+        <div id="holder">
+            <div class="container has-text-centered">
+                <section class="card">
+
+                    <h2 id="card-team"> 
+                        Daily Dose of NFL!
+                    </h2>  
+
+                    <img src="./assets/images/NFL.png" style="width: 100%; height: 35%">
+                    <article id="NFLNewsList"></article> 
+                    
+                </section>
+
+                <section class="container">
+                    <h2 id="card-team"> 
+                        MLB on Deck!
+                    </h2>
+                    <img src="./assets/images/MLB.png" style="width: 100%; height: 35%">
+       
+                    <article id="MLBNewsList"></article>  
+                    
+                </section>
+
+                <section class="container">
+                    <h2 id="card-team"> 
+                        Centercourt NBA!
+                    </h2>
+                    <img src="./assets/images/NBA.png" style="width: 100%; height: 35%">
+                          
+                        <article id="NBANewsList"></article>  
+                    
+                </section>  
+
+                <section class="container">
+                    <h2 id="card-team"> 
+                        Hats off to the NHL!
+                    </h2>
+                    <img src="./assets/images/NHL.jpg" style="width: 100%; height: 35%">
+                          
+                        <article id="NHLNewsList"></article>  
+                    
+                </section> 
+            </div>
+        </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
