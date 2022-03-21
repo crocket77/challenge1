@@ -1,0 +1,33 @@
+@import "../base/mixins.scss";
+
+header {
+  @include flexCenter();
+  padding: 20px 35px;
+  border-bottom: 2px dashed var(--lightGreen);
+  justify-content: space-between;
+
+  a,
+  p {
+    width: 25%;
+    text-decoration: none;
+    color: var(--cream);
+    font-size: 1.2rem;
+  }
+
+  a:hover {
+    color: var(--yellow);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header {
+    padding: 30px 35px;
+
+    a,
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+      width: 50%;
+    }
+  }
+}

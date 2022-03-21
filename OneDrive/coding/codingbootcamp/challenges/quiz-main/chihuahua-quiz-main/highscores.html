@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>High Scores!</title>
+
+    <!-- css link-->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- boostrap link -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/dd5e33ee8b.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="hs-body">
+    <div class="wrapper w-30">
+      <h1 class="text-center text-white m-0"><i class="fas fa-dog"></i> High Scores <i class="fas fa-dog"></i></h1>
+      <ol id="highscores" class="start"></ol>
+
+      <!-- no scores screen -->
+      <p id="no-scores" class="scores-no hide text-white text-center m-0">NO HIGH SCORES YET</p>
+
+      <!-- buttons -->
+      <div class="d-flex justify-content-around">
+        <a href="index.html"><button class="btn btn-light" onclick="$(this).blur();">Go Back</button></a>
+        <button id="clear" class="btn btn-light">Clear High Scores</button>
+      </div>
+    </div>
+
+    <script src="assets/js/highscores.js"></script>
+  </body>
+</html>

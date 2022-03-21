@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #11151c;
+  --grey: #37312f;
+  --lightGreen: #4e524b;
+  --yellow: #f6ab13;
+  --cream: #edf4ed;
+}
+
+body {
+  background: var(--black);
+  color: var(--yellow);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: monospace;
+}

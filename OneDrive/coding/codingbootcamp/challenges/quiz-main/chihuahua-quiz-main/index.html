@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chihuahua Quiz!</title>
+    <!-- boostrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- fontawesome link -->
+    <script
+      src="https://kit.fontawesome.com/dd5e33ee8b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+
+  <body class="body">
+    <div class="scores"><a href="highscores.html">View High Scores</a></div>
+
+    <div class="timer">Time: <span id="time">150</span></div>  
+    <div id="deduct" class="minus hide">-10 sec!</div>
+
+    <div class="wrapper">
+      <!-- start screen section -->
+      <div id="start-screen" class="start screen-start rounded-3">
+        <h1 class="px-4 pt-4 m-0">Chihuahua Quiz <i class="fas fa-dog"></i></h1>
+        <p class="p-4 m-0">
+          Try to answer the extremely challenging and small questions about
+          Jess' chihuahuas! There's a time limit AND incorrect answers will
+          penalize your time (score) by ten seconds! ~HINT~ Make sure you scan
+          the photo of the lovely chihuahuas below ♥️
+        </p>
+        <button id="start" class="btn btn-info btn-lg">Start Quiz</button>
+        <div class="py-4">
+          <img
+            src="assets/images/chihuahuas.jpeg"
+            class="rounded"
+            width="70%"
+            alt="four chihuahuas!"
+          />
+        </div>
+      </div>
+
+      <!-- questions screen section -->
+      <div id="questions" class="hide screen-questions py-4 rounded-3">
+        <h2 id="question-title" class="p-4 m-0">Question Text</h2>
+        <div class="container d-flex justify-content-center">
+          <div class="row">
+            <div class="col-6 p-2">
+              <button
+                id="choice1"
+                class="btn btn-info btn-block"
+                onclick="clickedAnswer(event)"
+              >
+                mini
+              </button>
+            </div>
+            <div class="col-6 p-2">
+              <button
+                id="choice2"
+                class="btn btn-info btn-block"
+                onclick="clickedAnswer(event)"
+              >
+                flash
+              </button>
+            </div>
+            <div class="col-6 p-2">
+              <button
+                id="choice3"
+                class="btn btn-info btn-block"
+                onclick="clickedAnswer(event)"
+              >
+                peke
+              </button>
+            </div>
+            <div class="col-6 p-2">
+              <button
+                id="choice4"
+                class="btn btn-info btn-block"
+                onclick="clickedAnswer(event)"
+              >
+                jedi
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end screen section // game ended, user didn't lose -->
+      <div id="end-screen" class="hide screen-end rounded">
+        <h2 class="p-4 m-0">
+          You finished the quiz! Great accomplishment. It's too difficult for
+          some. To save your score, you get to name your doggo
+          <i class="fas fa-dog"></i>
+        </h2>
+        <p class="p-2 m-0">
+          Your final score is <span id="final-score"></span>.
+        </p>
+        <p class="p-4 dog-name">
+          Enter Doggo Name:
+          <input
+            type="text"
+            id="doggo-name"
+            maxlength="10"
+            minlength="1"
+            onkeypress="enterKeyPressed(event)"
+          />
+          <button id="submit" class="btn btn-info mb-1">Submit</button>
+        </p>
+      </div>
+
+      <!-- lose screen section // game ended, user loses -->
+      <div id="lose-screen" class="hide screen-lose rounded-3">
+        <h2 class="p-4 m-0">
+          Oh no! You lose! The chihuahuas deserve better than this..
+        </h2>
+        <div>
+          <button id="restart" class="btn btn-dark btn-lg">
+            Do you want to play again?
+          </button>
+        </div>
+        <h2 class="p-4 m-0">Or return to</h2>
+        <div class="pb-4">
+          <button id="home" class="btn btn-dark btn-lg">Home Screen</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- script.js link -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

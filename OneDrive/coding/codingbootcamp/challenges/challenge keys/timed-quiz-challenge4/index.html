@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizard's Coding Challenge 🧙‍♂️</title>
+    <link rel="stylesheet" href="assets/css/combined.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+  </head>
+  <body style="user-select: none;">
+    <header>
+      <a id="nav-el" style="cursor: pointer; user-select: none;" draggable="false" data-state="high-score">View High Scores</a>
+      <p>
+        Score:
+        <span id="timer">0</span>
+      </p>
+    </header>
+    <main class="page-content" id="page-content">
+      <h1>Quizard's Coding Challenge 🧙‍♂️</h1>
+      <ul style="display:flex; flex-direction: column; height: 15rem; justify-content:space-evenly;text-align:left; font-size:1.5rem;line-height: 1.5;">
+        <li>
+          Try to answer Quizard's coding questions before the timer runs out
+        </li>
+        <li>
+        Beware! <span style="color:red;">INCORRECT ANSWERS</span> will remove 1000 from your score!
+        </li>
+        <li>
+        But lucky for you... <span style="color: #4e524b;">CORRECT ANSWERS</span> will add 1000...
+        </li>
+        <li>
+        Submit your initials at the end to see if you made the leaderboard!
+        </li>
+      </ul>
+      <button id="start-btn">Start Quiz</button>
+      <h1 class="question" style="display:none;"">Commonly used data types DO NOT include:</h1>
+      <div class="answer-wrapper" style="display: none;">
+        <div class="answer" id="a">
+          A. Array
+        </div>
+        <div class="answer" id="b">
+          B. String
+        </div>
+        <div class="answer" id="c">
+          C. Boolean
+        </div>
+        <div class="answer" id="d">
+          D. Alert
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span style="cursor: grabbing;">
+        &copy; 2022 Made with
+        <img src="assets/images/heart-icon.svg" alt="heart"/>
+        by Keenan Chiasson
+      </span>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
